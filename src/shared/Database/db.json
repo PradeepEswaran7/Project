@@ -1,0 +1,36 @@
+{
+  "login": [
+    {
+      "id": 101,
+      "name": "Muthu",
+      "email": "muthu@gmail.com",
+      "password": "Muthu@123",
+      "mobile": "8989898989"
+    },
+    {
+      "id": 102,
+      "name": "Muthu",
+      "email": "pradeep@gmail.com",
+      "password": "Pradeep@123",
+      "mobile": "9797979797"
+    },
+    {
+      "username": "Sathya",
+      "useremail": "sathya@gmail.com",
+      "userpass": "Satha@123",
+      "usermobile": "9654123654",
+      "textaddr": "",
+      "gender": "",
+      "id": 103
+    },
+    {
+      "username": "Anathu",
+      "useremail": "anathu@gmail.com",
+      "userpass": "dD@345689",
+      "usermobile": "9865326598",
+      "textaddr": "",
+      "gender": "",
+      "id": 104
+    }
+  ]
+}
