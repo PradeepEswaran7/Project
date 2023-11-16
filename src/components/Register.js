@@ -4,20 +4,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    username: '',
-    useremail: '',
-    userpass: '',
-    usermobile: '',
-    textaddr: '',
+    name: '',
+    email: '',
+    password: '',
+    mobile: '',
+    address: '',
     gender: '',
   });
 
   const [errors, setErrors] = useState({
-    username: '',
-    useremail: '',
-    userpass: '',
-    usermobile: '',
-    textaddr: '',
+    name: '',
+    email: '',
+    password: '',
+    mobile: '',
+    address: '',
     gender: '',
   });
 
@@ -37,23 +37,23 @@ const Register = () => {
     let newErrors = { ...errors };
 
     switch (fieldName) {
-      case 'username':
-        newErrors.username = value.length < 1 ? 'Name is required.' : '';
+      case 'name':
+        newErrors.name = value.length < 1 ? 'Name is required.' : '';
         break;
-      case 'useremail':
-        newErrors.useremail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+      case 'email':
+        newErrors.email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
           ? ''
           : 'Invalid email address.';
         break;
-      case 'userpass':
+      case 'password':
         // Password validation criteria
-        newErrors.userpass = '';
+        newErrors.password = '';
         if (value.length < 8 || value.length > 16 || !/[a-z]/.test(value) || !/[A-Z]/.test(value) || !/[!@#$%^&*(),.?":{}|<>]/.test(value) || /\s/.test(value)) {
-          newErrors.userpass = 'At least one lowercase letter, At least one uppercase letter, At least one special character, No spaces allowed, Minimum 8 and maximum 16 characters';
+          newErrors.password = 'At least one lowercase letter, At least one uppercase letter, At least one special character, No spaces allowed, Minimum 8 and maximum 16 characters';
         }
         break;
-      case 'usermobile':
-        newErrors.usermobile = /^\d{10}$/.test(value) ? '' : 'Mobile number must be 10 digits.';
+      case 'mobile':
+        newErrors.mobile = /^\d{10}$/.test(value) ? '' : 'Mobile number must be 10 digits.';
         break;
       // Add validation for other fields if needed
       default:
@@ -86,57 +86,57 @@ const Register = () => {
             <div className="mb-3">
               <input
                 type="text"
-                name="username"
-                value={formData.username}
+                name="name"
+                value={formData.name}
                 onChange={handleChange}
                 className="form-control"
                 placeholder="Enter your Name"
               />
-              <div className="text-danger">{errors.username}</div>
+              <div className="text-danger">{errors.name}</div>
             </div>
             <div className="mb-3">
               <input
                 type="email"
-                name="useremail"
-                value={formData.useremail}
+                name="email"
+                value={formData.email}
                 onChange={handleChange}
                 className="form-control"
                 placeholder="Enter your Email"
               />
-              <div className="text-danger">{errors.useremail}</div>
+              <div className="text-danger">{errors.email}</div>
             </div>
             <div className="mb-3">
               <input
                 type="password"
-                name="userpass"
-                value={formData.userpass}
+                name="password"
+                value={formData.password}
                 onChange={handleChange}
                 className="form-control"
                 placeholder="Enter your Password"
               />
-              <div className="text-danger">{errors.userpass}</div>
+              <div className="text-danger">{errors.password}</div>
             </div>
             <div className="mb-3">
               <input
                 type='text'
-                name='usermobile'
-                value={formData.usermobile}
+                name='mobile'
+                value={formData.mobile}
                 onChange={handleChange}
                 className='form-control'
                 placeholder="Enter your Mobile Number"
               />
-              <div className="text-danger">{errors.usermobile}</div>
+              <div className="text-danger">{errors.mobile}</div>
             </div>
-            <div className="mb-3">
-              <textarea name="textaddr" id="textaddr" rows="3" cols="49" className='form-control' placeholder="Enter your Address"></textarea>
+            <div className="mb-3" onChange={handleChange}>
+              <textarea name="address" id="address" rows="3" cols="49" className='form-control' placeholder="Enter your Address"></textarea>
               <div className="text-danger"></div>
             </div>
-            <div className="mb-3">
+            <div className="mb-3" onChange={handleChange}>
               <input type="radio" id="genderMale" name="gender"  value="M"/>
               Male &nbsp;&nbsp;
-              <input type="radio" id="genderFemale" name="gender" value={formData.gender}/>
+              <input type="radio" id="genderFemale" name="gender" value="F"/>
               Female &nbsp;&nbsp;
-              <input type="radio" id="genderTrans" name="gender" value={formData.gender}/>
+              <input type="radio" id="genderTrans" name="gender" value="T"/>
               Transgender
               <div className="text-danger"></div>
             </div>

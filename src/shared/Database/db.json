@@ -9,28 +9,19 @@
     },
     {
       "id": 102,
-      "name": "Muthu",
+      "name": "Pradeep",
       "email": "pradeep@gmail.com",
       "password": "Pradeep@123",
       "mobile": "9797979797"
     },
     {
-      "username": "Sathya",
-      "useremail": "sathya@gmail.com",
-      "userpass": "Satha@123",
-      "usermobile": "9654123654",
-      "textaddr": "",
-      "gender": "",
+      "name": "Sathya",
+      "email": "sathya@gmail.com",
+      "password": "Sathya@123",
+      "mobile": "9865329856",
+      "address": "chennai, ",
+      "gender": "M",
       "id": 103
-    },
-    {
-      "username": "Anathu",
-      "useremail": "anathu@gmail.com",
-      "userpass": "dD@345689",
-      "usermobile": "9865326598",
-      "textaddr": "",
-      "gender": "",
-      "id": 104
     }
   ]
 }

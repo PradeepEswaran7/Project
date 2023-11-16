@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './External.css'; 
 
 const Login = () => {
-    const backgroundImage = require('./electronics.jpg');
   
     const [formData, setFormData] = useState({
       useremail: '',
@@ -100,10 +99,10 @@ const Login = () => {
     };
   
     return (
-      <div style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', height: '100vh' }}>
+      <div >
         <div className="col-lg-4 mx-auto">
           <div className="card" style={{ backgroundColor: '#f0f0f0' }}>
-            <h1>Login</h1>
+            <h1 style={{ textAlign: 'center' }}>Login</h1>
             <div className="card-body">
               <form className='myform' onSubmit={handleSubmit}>
                 <div className="mb-3">
@@ -128,9 +127,10 @@ const Login = () => {
                   />
                   <div className="text-danger">{errors.userpass}</div>
                 </div>
-                <button type='submit' className='btn btn-success mt-2' disabled={loading}>
-                  {loading ? 'Logging in...' : 'Login'}
-                </button>
+                <div style={{ textAlign: 'center' }}>
+                  <button type='submit' className='btn btn-success mt-2'>Login        
+                  </button>
+                </div>
               </form>
             </div>
           </div>
